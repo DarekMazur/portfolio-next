@@ -21,7 +21,7 @@ export interface PostData extends PostFrontmatter {
 	contentHtml?: string;
 }
 
-const createSlug = (text?: string): string => {
+export const createSlug = (text?: string): string => {
 	if (!text) return 'untitled-post';
 
 	return text
