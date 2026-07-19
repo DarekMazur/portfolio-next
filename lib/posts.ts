@@ -26,14 +26,16 @@ export const createSlug = (text?: string): string => {
 
 	return text
 		.toString()
-		.replace(/ł/g, 'l').replace(/Ł/g, 'L') // <-- DODAJ TO!
+		.replace(/ł/g, 'l').replace(/Ł/g, 'L')
 		.normalize('NFD')
 		.replace(/[\u0300-\u036f]/g, '')
 		.toLowerCase()
-		.replace(/[^a-z0-9 -]/g, '')
+		.replace(/[^a-z0-9 ]/g, '') // Zmieniamy: usuwamy wszystko, co NIE jest literą, cyfrą lub SPACJĄ
 		.trim()
-		.replace(/\s+/g, '-');
-}
+		.replace(/\s+/g, '-')      // Zamieniamy dowolną liczbę spacji na jeden myślnik
+		.replace(/-+/g, '-')       // DODAJ TO: redukuje serię myślników (np. ---) do jednego (-)
+		.replace(/^-+|-+$/g, '');  // Usuwa myślniki z początku i końca (opcjonalnie)
+};
 
 export const getSortedPostsData = (): PostData[] => {
 	const fileNames = fs.readdirSync(postsDirectory);
