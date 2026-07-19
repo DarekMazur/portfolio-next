@@ -1,3 +1,3 @@
-[submodule "content/blog"]
-	path = content/blog
+[submodule "posts"]
+	path = posts
 	url = git@github.com:DarekMazur/nerdistry_posts.git
