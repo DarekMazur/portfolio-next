@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ReactNode } from 'react'
 
 import './globals.css'
+import Header from '@/components/Organisms/Header'
 
 export const metadata: Metadata = {
   title: 'Lorem Ipsum',
@@ -15,7 +16,10 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="pl">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
