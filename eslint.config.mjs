@@ -17,6 +17,7 @@ export default [
       '*.config.js',
       '*.config.mjs',
       '/posts/*',
+      '**/next-env.d.ts',
     ],
   },
   {

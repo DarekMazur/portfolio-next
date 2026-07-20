@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Montserrat+Alternates:wght@400;700;900&family=Russo+One&family=Montserrat+Subrayada:wght@400;700;900&family=Share+Tech+Mono&family=Inconsolata&display=swap');
+@import 'tailwindcss';
+
+@layer base {
+  body {
+    @apply bg-[var(--dark-black)] text-[var(--light-white)];
+    font-family: 'Montserrat', sans-serif;
+  }
+}
