@@ -33,11 +33,11 @@ export const createSlug = (text?: string): string => {
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
-    .replace(/[^a-z0-9 ]/g, '') // Zmieniamy: usuwamy wszystko, co NIE jest literą, cyfrą lub SPACJĄ
+    .replace(/[^a-z0-9 ]/g, '')
     .trim()
-    .replace(/\s+/g, '-') // Zamieniamy dowolną liczbę spacji na jeden myślnik
-    .replace(/-+/g, '-') // DODAJ TO: redukuje serię myślników (np. ---) do jednego (-)
-    .replace(/^-+|-+$/g, '') // Usuwa myślniki z początku i końca (opcjonalnie)
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '')
 }
 
 export const getSortedPostsData = (): PostData[] => {
