@@ -1,9 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Montserrat+Alternates:wght@400;700;900&family=Russo+One&family=Montserrat+Subrayada:wght@400;700;900&family=Share+Tech+Mono&family=Inconsolata&display=swap');
-@import 'tailwindcss';
+
+@import "tailwindcss";
 
 @layer base {
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-[var(--dark-black)] text-[var(--light-white)];
-    font-family: 'Montserrat', sans-serif;
+    @apply bg-white text-black font-[var(--main)] text-[var(--m)] leading-loose overflow-x-hidden w-screen m-0 p-0;
+  }
+
+  @media (min-width: 820px) {
+    body {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    body {
+      font-size: 1.6rem;
+    }
+  }
+
+  p {
+    @apply my-[2.7rem] mx-0;
   }
 }
