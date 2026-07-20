@@ -22,7 +22,9 @@ export interface PostData extends PostFrontmatter {
 }
 
 export const createSlug = (text?: string): string => {
-  if (!text) return 'untitled-post'
+  if (!text) {
+    return 'untitled-post'
+  }
 
   return text
     .toString()

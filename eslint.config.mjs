@@ -43,7 +43,7 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-shadow': 'off',
       'arrow-body-style': 'off',
-      curly: ['error', 'multi'],
+      curly: ['error', 'all'],
       'import/extensions': 'off',
       'react/button-has-type': 'off',
       'react/react-in-jsx-scope': 'off',
